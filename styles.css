@@ -1,0 +1,118 @@
+:root
+{
+    --animationD: 1s;
+}
+
+#nameDiv
+{   
+    padding: 35px;
+    position: absolute;
+    top: 30%;
+    text-align: left;
+}
+
+#intro
+{
+color:gray;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: larger;
+    width: auto;
+    line-height: 3px;
+    margin:0%;
+    
+    animation: fadeInHeader linear var(--animationD);
+}
+
+@keyframes fadeInHeader {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#title
+{
+    line-height: auto;
+    width: 100%;
+    height: auto    ;
+    color:darkslategray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 500%;
+    font-display: fallback;
+    word-wrap: break-word;
+    margin:0%;
+}
+
+@keyframes fadeInTitle {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body
+{
+    background-color:rgb(65, 73, 82);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#foreground
+{
+    background-color: aliceblue;
+    position: absolute;
+    top: 5%;
+    left: 0px; 
+    bottom: 5%;
+
+    width: 100%;
+    
+    margin: 0 auto;
+    text-align: center;
+
+    box-shadow: 0px 20px 20px rgb(32, 35, 42), 0 -20px 20px rgb(32, 35, 31); 
+}
+
+.verticalLine
+{
+    position:absolute;
+    border-left: 2px solid  rgb(32, 35, 31); ;
+    height: 100%;
+}
+
+.thirdSection
+{
+    text-align: left;
+    padding: 10px;
+    padding-top: 2px;
+    position: absolute; 
+    width: 32%;
+    height: 100%;
+}
+
+.header
+{
+    color:darkslategray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-display: fallback;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size: 155%;
+}
+
+.sectionButton
+{
+    background-color: transparent;
+    border: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 250%;
+    color:darkslategrey;
+}
+
+.sectionButton:hover
+{
+    color: lightslategrey;
+}
+
+#buttonStack
+{
+    display: block;
+    position: relative;
+}
