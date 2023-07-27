@@ -1,19 +1,44 @@
-var i = 0;
-var txt = 'Miron Sulicz';
-var speed = 50;
-var titleWaitTime = 1000;
+const textLength = 20;
+const nameLength = 14;
+const typeSpeed = 185;
 
-function typeText()
-{
-    if (i < txt.length)
-    {
-        document.getElementById("title").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeText, speed);
+var textIndex = 0;
+var nameTemp = "";
+
+function generateRandomText(id) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let result = '';
+
+    for (let i = 0; i < textLength; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
+
+    document.getElementById(id).innerHTML = result;
 }
 
-window.onload = function revealTitle()
-{
-    setTimeout(typeText, titleWaitTime);
+function generateNameText() {
+    const name = " Miron Sulicz ";
+    let nameElement = document.getElementById('title2');
+
+    start = (textLength - nameLength) / 2;
+    end = textLength - start;
+
+    let newText = nameElement.textContent.toString();
+
+    if (textIndex < name.length) {
+        nameTemp += name.charAt(textIndex);
+
+        nameElement.innerHTML = newText.substring(0, start);
+
+        let nameSpan = document.createElement("span");
+        nameSpan.innerText = nameTemp;
+        nameElement.appendChild(nameSpan);
+
+        nameElement.innerHTML += newText.substring(start+textIndex+1);
+
+        textIndex ++;
+
+        setTimeout(generateNameText, typeSpeed);
+    }
 }

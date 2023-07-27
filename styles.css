@@ -1,118 +1,105 @@
-:root
-{
-    --animationD: 1s;
+body {
+    background-color:rgb(243, 244, 252);
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-#nameDiv
-{   
-    padding: 35px;
-    position: absolute;
-    top: 30%;
-    text-align: left;
-}
-
-#intro
-{
-color:gray;
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: larger;
-    width: auto;
-    line-height: 3px;
-    margin:0%;
-    
-    animation: fadeInHeader linear var(--animationD);
-}
-
-@keyframes fadeInHeader {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-#title
-{
-    line-height: auto;
-    width: 100%;
-    height: auto    ;
-    color:darkslategray;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 500%;
-    font-display: fallback;
-    word-wrap: break-word;
-    margin:0%;
-}
-
-@keyframes fadeInTitle {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-body
-{
-    background-color:rgb(65, 73, 82);
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-#foreground
-{
-    background-color: aliceblue;
-    position: absolute;
-    top: 5%;
-    left: 0px; 
-    bottom: 5%;
-
-    width: 100%;
-    
-    margin: 0 auto;
+.title {
+    font-family: 'IBM Plex Mono', monospace;;
+    font-weight: 200;
     text-align: center;
-
-    box-shadow: 0px 20px 20px rgb(32, 35, 42), 0 -20px 20px rgb(32, 35, 31); 
+    font-size: 5.5vw;
+    color: rgb(17, 16, 19);
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow-wrap: break-word;
 }
 
-.verticalLine
-{
-    position:absolute;
-    border-left: 2px solid  rgb(32, 35, 31); ;
-    height: 100%;
+.titleBig {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 9vw;
+    margin-top: 35vh;
+    color: rgb(17, 16, 19);
 }
 
-.thirdSection
-{
-    text-align: left;
-    padding: 10px;
-    padding-top: 2px;
-    position: absolute; 
-    width: 32%;
-    height: 100%;
+#titleBlock {
+    margin: auto;
+    width: auto;
+    top: 8%;
+    left: 10%;
+    right: 10%;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
+    border: 1px solid rgb(17, 16, 19);;
+    padding: 70px;
+    position: fixed;
 }
 
-.header
-{
-    color:darkslategray;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-display: fallback;
-    word-wrap: break-word;
+.title span{
     font-weight: bold;
-    font-size: 155%;
+    color: rgb(177, 135, 19);
 }
 
-.sectionButton
-{
-    background-color: transparent;
+#buttonBlock {
+    width: auto;
+    position: fixed;
+
+    top: 73vh;
+    left: 15%;
+    right: 15%;
+    
+    align-items: center;
+    margin:auto;
+    display: flex inline;
+}
+
+.button {
+    width: auto;
+    height: 7vh;
+    margin: auto;
+    font-size: 235%;
     border: 0;
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 250%;
-    color:darkslategrey;
+    background-color: transparent;
+    font-family: 'Work Sans', sans-serif;
+
+    transition-duration: 0.5s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
 }
 
-.sectionButton:hover
-{
-    color: lightslategrey;
+.button:hover {
+    color:rgb(177, 135, 19);
+    vertical-align: middle;
+    transform: translateY(-5px);
 }
 
-#buttonStack
-{
-    display: block;
-    position: relative;
+.button:active {
+    color:rgb(116, 87, 9);
+}
+
+#portfolioButton {
+    font-size: 275%;
+}
+
+#canvas {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#pictures {
+
 }

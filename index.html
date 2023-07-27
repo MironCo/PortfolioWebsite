@@ -1,44 +1,35 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset='utf-8'>
+    <title>Miron Sulicz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
-    
-    <script src="scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
 
-    <title>Miron Sulicz - Portfolio</title>
+    <script src='scripts.js'></script>
 </head>
-<body">
-    <div id="foreground">
-        
-        <div class="verticalLine" style="left: 33%;"></div>
-        <div class="verticalLine" style="left: 66%;"></div>
-
-        <div class="thirdSection" style="left:0%">
-            <div id="nameDiv"> 
-                <p id="intro">Hello, my name is</p>
-                <h1 id="title"></h1>            
-            </div>
-        </div>
-        
-        <div class="thirdSection" style="left:33%">
-            <h2 class="header">Information</h2> 
-        </div>
-
-        <div class="thirdSection" style="left:66%">
-            <div id="buttonStack">   
-                <h2 class="header">Sections</h2> 
-                <button class = "sectionButton">About Me</button>
-                <br>
-                <button class = "sectionButton">Experience</button>
-                <br>
-                <button class = "sectionButton">Contact</button>
-                <br>
-            </div>
-        </div>
+<body>
+    <div id="titleBlock">
+        <h1 class="title" id="title1"></h1>
+        <h1 class="title" id="title2"></h1>
+        <h1 class="title" id="title3"></h1>
+        <script>
+            generateRandomText('title1');
+            generateRandomText('title2');    
+            generateRandomText('title3');
+            
+            setTimeout(generateNameText, 1000);
+        </script>
+    </div>
+    <div id = 'buttonBlock'>
+        <button class='button' onclick="location.href='about.html'">About</button>
+        <button class='button' onclick="location.href='portfolio.html'">Portfolio</button>
+        <button class='button'>Contact</button>
     </div>
 </body>
 </html>
