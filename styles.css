@@ -22,32 +22,37 @@ html {
     font-family: 'IBM Plex Mono', monospace;;
     font-weight: 200;
     text-align: center;
-    font-size: 5.5em;
+    font-size: 6.5vh;
     color: rgb(17, 16, 19);
     margin-bottom: 0px;
     margin-top: 0px;
     overflow-wrap: break-word;
+    resize: both;
 }
 
 .titleBig {
     font-family: 'Work Sans', sans-serif;
     text-align: center;
     font-size: 9vw;
+    font-weight: 600;
     margin-top: 35vh;
     color: rgb(17, 16, 19);
 }
 
 #titleBlock {
+    container-type: inline-size;
+    resize: both;
     margin: auto;
     width: auto;
     height: auto;
-    top: 8%;
-    left: 10%;
-    right: 10%;
+    top: 7.5%;
+    left: 5%;
+    right: 5%;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     border: 1px solid rgb(17, 16, 19);;
     padding: 70px;
-    position: fixed;
+    position: fixed; 
+    overflow-wrap: break-word;
 }
 
 .title span{
@@ -59,7 +64,7 @@ html {
     width: auto;
     position: fixed;
 
-    top: 73vh;
+    top: 60vh;
     left: 15%;
     right: 15%;
     
@@ -158,4 +163,23 @@ section {
 .goldText {
     color:rgb(177, 135, 19);
     font-weight: bold;
+}
+
+.aboutMeDescription {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5vw;
+    font-weight: 300;
+    color: rgb(17, 16, 19);
+    display: inline-block;
+    position:relative;
+    top: 45%;
+    transform: translate(0, -50%);
+}
+
+.aboutMeSection {
+    margin: auto;
+    height: 100vh;
+    width: 75%;
+    scroll-snap-align:center;
 }
